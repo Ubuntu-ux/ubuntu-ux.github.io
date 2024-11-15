@@ -1,0 +1,89 @@
+<!-- C:\Our page project\index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Bedrock Launcher</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #87CEEB, #4682B4);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        #language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #download-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #download-button:hover {
+            background-color: #FF6347;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Minecraft Bedrock Launcher</h1>
+    <p id="description">Download the latest version of the Minecraft Bedrock Launcher.</p>
+    
+    <select id="language-selector" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+    </select>
+
+    <button id="download-button" onclick="downloadLauncher()">Download</button>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language-selector').value;
+            if (lang === 'ru') {
+                document.getElementById('title').innerText = 'Лаунчер Minecraft Bedrock';
+                document.getElementById('description').innerText = 'Скачайте последнюю версию лаунчера Minecraft Bedrock.';
+                document.getElementById('download-button').innerText = 'Скачать';
+            } else {
+                document.getElementById('title').innerText = 'Minecraft Bedrock Launcher';
+                document.getElementById('description').innerText = 'Download the latest version of the Minecraft Bedrock Launcher.';
+                document.getElementById('download-button').innerText = 'Download';
+            }
+        }
+
+        function downloadLauncher() {
+            window.location.href = 'https://github.com/Ubuntu-ux/MinecraftLauncher/releases/download/1.0/MinecraftLauncher.zip';
+        }
+    </script>
+</body>
+</html>
