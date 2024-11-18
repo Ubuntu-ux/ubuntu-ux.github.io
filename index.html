@@ -1,89 +1,75 @@
-<!-- C:\Our page project\index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Bedrock Launcher</title>
+    <title>FlowIndustries - App Homepage</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #87CEEB, #4682B4);
-            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        h1, h2 {
+            color: #333;
         }
-        p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px;
-            font-size: 1em;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
         }
-        #download-button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            background-color: #FF4500;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .important {
+            color: red;
+            font-weight: bold;
         }
-        #download-button:hover {
-            background-color: #FF6347;
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #ddd;
+            text-align: center;
+            padding: 10px;
+            background: #f4f4f4;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1 id="title">Minecraft Bedrock Launcher</h1>
-    <p id="description">Download the latest version of the Minecraft Bedrock Launcher.</p>
-    
-    <select id="language-selector" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="ru">Русский</option>
-    </select>
 
-    <button id="download-button" onclick="downloadLauncher()">Download</button>
+    <header>
+        <h1>Welcome to FlowIndustries</h1>
+        <p>Your trusted partner in innovative solutions.</p>
+    </header>
 
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('language-selector').value;
-            if (lang === 'ru') {
-                document.getElementById('title').innerText = 'Лаунчер Minecraft Bedrock';
-                document.getElementById('description').innerText = 'Скачайте последнюю версию лаунчера Minecraft Bedrock.';
-                document.getElementById('download-button').innerText = 'Скачать';
-            } else {
-                document.getElementById('title').innerText = 'Minecraft Bedrock Launcher';
-                document.getElementById('description').innerText = 'Download the latest version of the Minecraft Bedrock Launcher.';
-                document.getElementById('download-button').innerText = 'Download';
-            }
-        }
+    <div class="container">
+        <h2>Privacy Policy</h2>
+        <p>Our privacy policy can be found at the following link:</p>
+        <p><a href="https://ubuntu-ux.github.io/privacy-policy-git/privacy_policy.html" target="_blank">Privacy Policy</a></p>
 
-        function downloadLauncher() {
-            window.location.href = 'https://github.com/Ubuntu-ux/MinecraftLauncher/releases/download/1.0/MinecraftLauncher.zip';
-        }
-    </script>
+        <h2>Contact Us</h2>
+        <p>We dont have support email. Sorry for that.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 FlowIndustries. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
